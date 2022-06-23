@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <style type="text/css">
+        .ExternalClass,
+        .ExternalClass div,
+        .ExternalClass font,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass td,
+        img {
+            line-height: 100%;
+        }
+
+        #outlook a {
+            padding: 0;
+        }
+
+        .ExternalClass,
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        a,
+        blockquote,
+        body,
+        li,
+        p,
+        table,
+        td {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            outline: 0;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        #bodyCell,
+        #bodyTable,
+        body {
+            height: 100% !important;
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        #bodyCell {
+            padding: 20px;
+        }
+
+        #bodyTable {
+            width: 716px;
+        }
+
+        @font-face {
+            font-family: Montserrat;
+            src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-regular-webfont-webfont.eot);
+            src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-regular-webfont-webfont.eot?#iefix)format("embedded-opentype"), url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-regular-webfont-webfont.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: Montserrat;
+            src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-semibold-webfont-webfont.eot);
+            src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-semibold-webfont-webfont.eot?#iefix)format("embedded-opentype"), url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-semibold-webfont-webfont.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            #bodyTable,
+            body {
+                width: 100% !important;
+            }
+
+            a,
+            blockquote,
+            body,
+            li,
+            p,
+            table,
+            td {
+                -webkit-text-size-adjust: none !important;
+            }
+
+            body {
+                min-width: 100% !important;
+            }
+
+            #bodyTable {
+                max-width: 600px !important;
+            }
+
+            #signIn {
+                max-width: 280px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <table
+            style='width: 716px;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;font-family: "Montserrat", sans-serif;border-collapse: collapse !important;height: 100% !important;'
+            align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <tr>
+                <td align="center" valign="top" id="bodyCell"
+                    style='-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 20px;padding: 0; background-color: #fff; font-family: "Montserrat", sans-serif;height: 100% !important;'>
+                    <div class="main" style="letter-spacing: 1px">
+                        <p style="padding: 28px 0; margin: 0">
+                            <img src="https://cdn.artera.ai/transactional-email/logo.png" alt="">
+                        </p>
+
+                        <div style="background-color: #130038; padding: 34px 0">
+                            <p>
+                                <img src="https://cdn.artera.ai/transactional-email/invitation.png" alt="">
+                            </p>
+                            <p
+                                style="font-size: 32px; font-weight: 500; line-height: 52px; padding: 0; margin: 0; color: #fff">
+                                {{ inviter.name }} has invited you to join
+                            </p>
+                            <p
+                                style="font-size: 32px; font-weight: 500; line-height: 52px; padding: 0; margin: 0; color: #fff">
+                                {{ organization.display_name }}'s {{ friendly_name }} account
+                            </p>
+                        </div>
+
+                        <p
+                            style="text-align: center; font-weight: 600;font-size: 19px; line-height: 21px; padding: 0; margin: 48px 0 35px">
+                            Your account information
+                        </p>
+
+                        <div style="margin: 0 auto">
+                            <table style="width: 506px; border-collapse: collapse; font-size: 16px; font-weight: 400">
+                                <tr style="height: 66px; border-top: 1px solid #8e8b8b">
+                                    <td style="width:30%; text-align: left; font-weight: 500">
+                                        Account:
+                                    </td>
+                                    <td style="width:70%; text-align: left">{{ user.email }}</td>
+                                </tr>
+                                <tr style="height: 66px; border-bottom: 1px solid #8e8b8b">
+                                    <td style="width:30%; text-align: left; font-weight: 500">
+                                        Organization:
+                                    </td>
+                                    <td style="width:70%; text-align: left">{{ organization.name }}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <a href="{{ url }}" style="text-decoration: none; color: #fcfcfc">
+                            <div
+                                style="width: 218px; height: 37px; border-radius: 20px; background-color: #0058C1; text-align: center; line-height: 37px; font-size: 18px; font-weight: 600; margin: 40px 0 48px">
+                                Accept Invitation
+                            </div>
+                        </a>
+
+                        <p style="color: #000; font-size: 12px; font-weight: 400; line-height: 21px; margin: 0">
+                            If you are having any issues with your account, please don't hesitate
+                        </p>
+                        <p style="color: #000; font-size: 12px; font-weight: 400; line-height: 21px; margin: 0">
+                            to contact us by replying to this email. Thank you!
+                        </p>
+                    </div>
+
+                    <div>
+                        <p
+                            style="color: #8e8b8b; font-size: 10px; font-weight: 300; line-height: 12px; margin: 44px 0 0">
+                            You're receiving this email because you have an account in Artera. If you are not
+                        </p>
+                        <p
+                            style="color: #8e8b8b; font-size: 10px; font-weight: 300; line-height: 12px; margin: 0 0 24px">
+                            sure why you're receiving this, please contact us via support@artera.ai.
+                        </p>
+
+                        <p style="color: #8e8b8b; font-size: 9px; font-weight: 300; line-height: 13px; margin: 0">
+                            Customer Success: 1-855-278-3724 (M-F, 6am - 5pm PDT)
+                        </p>
+                        <p style="color: #8e8b8b; font-size: 9px; font-weight: 300; line-height: 13px; margin: 0">
+                            Artera Inc., El Camino Real, Menlo Park, CA 94025, USA
+                        </p>
+
+                        <p style="margin: 12px 0 14px; color: #8e8b8b; font-size: 7px; line-height: 18px">
+                            <span>
+                                <a style="color: #8e8b8b; text-underline-offset: 3px"
+                                    href="https://artera.ai/privacy-policy/">
+                                    Product Privacy Statement
+                                </a>
+                            </span>
+                            <span style="padding: 0 10px">|</span>
+                            <span>
+                                <a style="color: #8e8b8b; text-underline-offset: 3px"
+                                    href="https://artera.ai/terms-of-service/">
+                                    Terms of Service
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
